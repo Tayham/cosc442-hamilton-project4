@@ -28,9 +28,9 @@ public class Recipe {
     	if(amtChocolate >= 0) {
     		this.amtChocolate = amtChocolate;
     	}
-    	else {
-    		this.amtChocolate = 0;
-    	}
+//    	else {
+//    		this.amtChocolate = 0;
+//    	}
     }
     /**
      * Method getAmtCoffee.
@@ -47,9 +47,9 @@ public class Recipe {
     	if(amtCoffee >= 0) {
     		this.amtCoffee = amtCoffee;
     	}
-    	else {
-    		this.amtCoffee = 0;
-    	}
+//    	else {
+//    		this.amtCoffee = 0;
+//    	}
     }
     /**
      * Method getAmtMilk.
@@ -66,9 +66,9 @@ public class Recipe {
     	if(amtMilk >= 0) {
     		this.amtMilk = amtMilk;
     	}
-    	else {
-    		this.amtMilk = 0;
-    	}
+//    	else {
+//    		this.amtMilk = 0;
+//    	}
     }
     /**
      * Method getAmtSugar.
@@ -85,9 +85,9 @@ public class Recipe {
     	if(amtSugar >= 0) {
     		this.amtSugar = amtSugar;
     	}
-    	else {
-    		this.amtSugar = 0;
-    	}
+//    	else {
+//    		this.amtSugar = 0;
+//    	}
     }
     /**
      * Method getName.
@@ -118,9 +118,9 @@ public class Recipe {
     	if(price >= 0) {
     		this.price = price;
     	}
-    	else {
-    		this.price = 0;
-    	}
+//    	else {
+//    		this.price = 0;
+//    	}
     } 
     /**
      * Method equals.

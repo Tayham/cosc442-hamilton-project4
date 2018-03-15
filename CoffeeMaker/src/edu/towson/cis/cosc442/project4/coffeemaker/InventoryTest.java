@@ -64,6 +64,10 @@ public class InventoryTest {
 		throws Exception {
 		Inventory fixture = new Inventory();
 		Recipe r = new Recipe();
+		r.setAmtChocolate(15);
+		r.setAmtCoffee(15);
+		r.setAmtMilk(15);
+		r.setAmtSugar(15);
 
 		boolean result = fixture.enoughIngredients(r);
 
@@ -106,6 +110,7 @@ public class InventoryTest {
 		// add additional test code here
 		assertEquals(15, result);
 	}
+	
 
 	/**
 	 * Run the int getMilk() method test.
@@ -175,6 +180,8 @@ public class InventoryTest {
 		int chocolate = 1;
 
 		fixture.setChocolate(chocolate);
+		fixture.setChocolate(0);
+		assertEquals(0, fixture.getChocolate());
 
 		// add additional test code here
 	}
@@ -194,6 +201,7 @@ public class InventoryTest {
 
 		fixture.setCoffee(coffee);
 
+
 		// add additional test code here
 	}
 
@@ -211,7 +219,8 @@ public class InventoryTest {
 		int coffee = 1;
 
 		fixture.setCoffee(coffee);
-
+		fixture.setCoffee(0);
+		assertEquals(0, fixture.getCoffee());
 		// add additional test code here
 	}
 
@@ -247,6 +256,8 @@ public class InventoryTest {
 		int milk = 1;
 
 		fixture.setMilk(milk);
+		fixture.setMilk(0);
+		assertEquals(0, fixture.getMilk());
 
 		// add additional test code here
 	}
@@ -283,7 +294,8 @@ public class InventoryTest {
 		int sugar = 1;
 
 		fixture.setSugar(sugar);
-
+		fixture.setSugar(0);
+		assertEquals(0, fixture.getSugar());
 		// add additional test code here
 	}
 

@@ -97,12 +97,25 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = new Recipe();
 		fixture.setName("");
+		fixture.setAmtChocolate(1);
 
 		int result = fixture.getAmtChocolate();
 
 		// add additional test code here
-		assertEquals(0, result);
+		assertEquals(1, result);
 	}
+	@Test
+	public void testGetAmtChocolate_2()
+			throws Exception {
+			Recipe fixture = new Recipe();
+			fixture.setName("");
+			fixture.setAmtChocolate(0);
+
+			int result = fixture.getAmtChocolate();
+
+			// add additional test code here
+			assertEquals(0, result);
+		}
 
 	/**
 	 * Run the int getAmtCoffee() method test.
@@ -116,13 +129,26 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = new Recipe();
 		fixture.setName("");
+		fixture.setAmtCoffee(1);
 
 		int result = fixture.getAmtCoffee();
 
 		// add additional test code here
-		assertEquals(0, result);
+		assertEquals(1, result);
 	}
 
+	@Test
+	public void testGetAmtCoffee_2()
+			throws Exception {
+			Recipe fixture = new Recipe();
+			fixture.setName("");
+			fixture.setAmtCoffee(0);
+
+			int result = fixture.getAmtCoffee();
+
+			// add additional test code here
+			assertEquals(0, result);
+		}
 	/**
 	 * Run the int getAmtMilk() method test.
 	 *
@@ -135,6 +161,20 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = new Recipe();
 		fixture.setName("");
+		fixture.setAmtMilk(1);
+
+		int result = fixture.getAmtMilk();
+
+		// add additional test code here
+		assertEquals(1, result);
+	}
+	
+	@Test
+	public void testGetAmtMilk_2()
+		throws Exception {
+		Recipe fixture = new Recipe();
+		fixture.setName("");
+		fixture.setAmtMilk(0);
 
 		int result = fixture.getAmtMilk();
 
@@ -154,6 +194,21 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = new Recipe();
 		fixture.setName("");
+		fixture.setAmtSugar(1);
+
+		int result = fixture.getAmtSugar();
+
+		// add additional test code here
+		assertEquals(1, result);
+	}
+	
+	@Test
+	public void testGetAmtSugar_2()
+		throws Exception {
+		Recipe fixture = new Recipe();
+		fixture.setName("");
+		fixture.setAmtSugar(1);
+		fixture.setAmtSugar(0);
 
 		int result = fixture.getAmtSugar();
 
@@ -211,10 +266,10 @@ public class RecipeTest {
 		throws Exception {
 		Recipe fixture = new Recipe();
 		fixture.setName("");
-		int amtChocolate = -1;
+		int amtChocolate = 1;
 
 		fixture.setAmtChocolate(amtChocolate);
-
+		assertEquals(1, fixture.getAmtChocolate());
 		// add additional test code here
 	}
 
@@ -233,6 +288,8 @@ public class RecipeTest {
 		int amtChocolate = 1;
 
 		fixture.setAmtChocolate(amtChocolate);
+		fixture.setAmtChocolate(0);
+		assertEquals(0, fixture.getAmtChocolate());
 
 		// add additional test code here
 	}
@@ -269,8 +326,9 @@ public class RecipeTest {
 		Recipe fixture = new Recipe();
 		fixture.setName("");
 		int amtCoffee = 1;
-
 		fixture.setAmtCoffee(amtCoffee);
+		fixture.setAmtCoffee(0);
+		assertEquals(0, fixture.getAmtCoffee());
 
 		// add additional test code here
 	}
@@ -309,6 +367,9 @@ public class RecipeTest {
 		int amtMilk = 1;
 
 		fixture.setAmtMilk(amtMilk);
+		fixture.setAmtMilk(0);
+		assertEquals(0, fixture.getAmtMilk());
+
 
 		// add additional test code here
 	}
@@ -404,6 +465,9 @@ public class RecipeTest {
 		int price = 1;
 
 		fixture.setPrice(price);
+		fixture.setPrice(0);
+		assertEquals(0, fixture.getPrice());
+
 
 		// add additional test code here
 	}

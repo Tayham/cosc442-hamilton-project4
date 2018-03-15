@@ -58,7 +58,7 @@ public class CoffeeMakerTest {
 	 * @generatedBy CodePro at 3/13/18 8:47 PM
 	 */
 	@Test
-	public void testAddInventory_1()
+	public void testAddInventory_2()
 		throws Exception {
 		CoffeeMaker fixture = new CoffeeMaker();
 		int amtCoffee = 1;
@@ -80,7 +80,7 @@ public class CoffeeMakerTest {
 	 * @generatedBy CodePro at 3/13/18 8:47 PM
 	 */
 	@Test
-	public void testAddInventory_2()
+	public void testAddInventory_1()
 		throws Exception {
 		CoffeeMaker fixture = new CoffeeMaker();
 		int amtCoffee = 1;
@@ -153,12 +153,43 @@ public class CoffeeMakerTest {
 		int amtMilk = 1;
 		int amtSugar = 1;
 		int amtChocolate = 1;
+		fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
 
-		boolean result = fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
-
+		Inventory i = fixture.checkInventory();
 		// add additional test code here
-		assertEquals(false, result);
+		assertEquals(16, i.getChocolate());
+		assertEquals(16, i.getCoffee());
+		assertEquals(16, i.getMilk());
+		assertEquals(16, i.getSugar());
 	}
+	@Test
+	public void testAddInventory_6()
+			throws Exception {
+			CoffeeMaker fixture = new CoffeeMaker();
+			int amtCoffee = 1;
+			int amtMilk = 1;
+			int amtSugar = 1;
+			int amtChocolate = 1;
+
+			boolean result = fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
+
+			// add additional test code here
+			assertEquals(true, result);
+		}
+	@Test
+	public void testAddInventory_7()
+			throws Exception {
+			CoffeeMaker fixture = new CoffeeMaker();
+			int amtCoffee = 0;
+			int amtMilk = 0;
+			int amtSugar = 0;
+			int amtChocolate = 0;
+
+			boolean result = fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
+
+			// add additional test code here
+			assertEquals(true, result);
+		}
 
 	/**
 	 * Run the boolean addRecipe(Recipe) method test.
@@ -637,6 +668,30 @@ public class CoffeeMakerTest {
 		// add additional test code here
 		assertEquals(1, result);
 	}
+	
+	@Test
+	public void testMakeCoffee_3()
+		throws Exception {
+		CoffeeMaker fixture = new CoffeeMaker();
+		Recipe r = new Recipe();
+		r.setAmtChocolate(1);
+		r.setAmtCoffee(1);
+		r.setAmtMilk(1);
+		r.setAmtSugar(1);
+		int amtPaid = 1;
+
+		int result = fixture.makeCoffee(r, amtPaid);
+		Inventory i = fixture.checkInventory();
+		// add additional test code here
+		assertEquals(14, i.getChocolate());
+		assertEquals(14, i.getCoffee());
+		assertEquals(14, i.getMilk());
+		assertEquals(14, i.getSugar());
+		// add additional test code here
+		assertEquals(1, result);
+	}
+	
+
 
 	/**
 	 * Perform pre-test initialization.
